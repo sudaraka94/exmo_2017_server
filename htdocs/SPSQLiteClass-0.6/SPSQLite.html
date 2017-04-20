@@ -1,0 +1,1814 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class SPSQLite</title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+						<script src="media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Simple Power SQLite Class v.0.6</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Simple Power SQLite class: Class in PHP for easy SQLite operation.</p>
+<p class="description"></p><p>Tested on PHP 4.3.3 (Win XP) - PHP5.0.0b2dev (Win XP).</p><p></p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.php-power.it/SPSQLite.class.php">http://www.php-power.it/SPSQLite.class.php</a></li>
+				<li><span class="field">license:</span> <a href="http://www.php.net/license/3_0.txt">http://www.php.net/license/3_0.txt</a></li>
+				<li><span class="field">copyright:</span> Copyright 2003 Alan D'Angelo</li>
+				<li><span class="field">version:</span> v 0.6 - 2003/07/15</li>
+				<li><span class="field">since:</span> PHP 4.3.3 (SQLite PECL extension)</li>
+				<li><span class="field">author:</span> Alan D'Angelo &lt;<a href="mailto:info@php-power.it">mailto:info@php-power.it</a>&gt;	</li>
+	  </ul>
+	</div>
+</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$_buffer" title="details" class="var-name">$_buffer</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">int</span>
+					<a href="#$_busyTimeout" title="details" class="var-name">$_busyTimeout</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_colsType" title="details" class="var-name">$_colsType</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_command" title="details" class="var-name">$_command</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">resource</span>
+					<a href="#$_conn" title="details" class="var-name">$_conn</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_file" title="details" class="var-name">$_file</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$_openTransaction" title="details" class="var-name">$_openTransaction</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_rememberType" title="details" class="var-name">$_rememberType</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">resource</span>
+					<a href="#$_result" title="details" class="var-name">$_result</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">bool</span>
+					<a href="#$_showError" title="details" class="var-name">$_showError</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_tableInfo" title="details" class="var-name">$_tableInfo</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_transaction" title="details" class="var-name">$_transaction</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_type" title="details" class="var-name">$_type</a>
+				</div>
+								<div class="var-title">
+					<img src="media/images/PrivateVariable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_version" title="details" class="var-name">$_version</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+					<img src="media/images/Constructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#SPSQLite" title="details" class="method-name">SPSQLite</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$persistent</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$showError</span> = <span class="var-default">true</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$rememberType</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addFunction" title="details" class="method-name">addFunction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$originalFunction</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$args</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addQuery" title="details" class="method-name">addQuery</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#affectedRows" title="details" class="method-name">affectedRows</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#alterTable" title="details" class="method-name">alterTable</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tableName</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$newDefinition</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$sourceCols</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$targetCols</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$tablename</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#beginTransaction" title="details" class="method-name">beginTransaction</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#classVersion" title="details" class="method-name">classVersion</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#close" title="details" class="method-name">close</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#commitTransaction" title="details" class="method-name">commitTransaction</a>
+											([<span class="var-type">bool</span>&nbsp;<span class="var-name">$stop</span> = <span class="var-default">false</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#decodeBinary" title="details" class="method-name">decodeBinary</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#encodeBinary" title="details" class="method-name">encodeBinary</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#escapeString" title="details" class="method-name">escapeString</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getColsType" title="details" class="method-name">getColsType</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$colname</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getTableInfo" title="details" class="method-name">getTableInfo</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tablename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#lastInsertId" title="details" class="method-name">lastInsertId</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#libEncoding" title="details" class="method-name">libEncoding</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#libVersion" title="details" class="method-name">libVersion</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#numRows" title="details" class="method-name">numRows</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#optimizeDatabase" title="details" class="method-name">optimizeDatabase</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$indexOrTable</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">bool</span>
+										<a href="#query" title="details" class="method-name">query</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$buffer</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#returnRows" title="details" class="method-name">returnRows</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#selectRows" title="details" class="method-name">selectRows</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$index01</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$index02</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setWaitingTime" title="details" class="method-name">setWaitingTime</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$milliseconds</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#turboMode" title="details" class="method-name">turboMode</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#_colsTypeCombine" title="details" class="method-name">_colsTypeCombine</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_createColsQuery" title="details" class="method-name">_createColsQuery</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$colsDefinition</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$onlyName</span> = <span class="var-default">false</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$colsfinition</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_filterName" title="details" class="method-name">_filterName</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$col</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_filterTrim" title="details" class="method-name">_filterTrim</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$col</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#_filterType" title="details" class="method-name">_filterType</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$col</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_rollbackTransaction" title="details" class="method-name">_rollbackTransaction</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_setColsType" title="details" class="method-name">_setColsType</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_setTableInfo" title="details" class="method-name">_setTableInfo</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tablename</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_setType" title="details" class="method-name">_setType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+								
+				<div class="method-definition">
+					<img src="media/images/PrivateMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_showError" title="details" class="method-name">_showError</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span> = <span class="var-default">''</span>])
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_buffer" id="$_buffer"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$_buffer</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">107</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use or not use buffer/unbeffered result?</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodquery">SPSQLite::query()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_busyTimeout" id="$_busyTimeout"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">int</span>
+			<span class="var-name">$_busyTimeout</span>
+			 = <span class="var-default"> 30000</span>			(line <span class="line-number">160</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Milliseconds</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodsetWaitingTime">SPSQLite::setWaitingTime()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_colsType" id="$_colsType"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_colsType</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">180</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array with cols name and type</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> </li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_command" id="$_command"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_command</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">87</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">the SQL query</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodquery">SPSQLite::query()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_conn" id="$_conn"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">resource</span>
+			<span class="var-name">$_conn</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">67</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Resouce of SQLite connection</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodSPSQLite">SPSQLite::SPSQLite()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_file" id="$_file"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_file</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The name of database</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> SPQSLite()</li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_openTransaction" id="$_openTransaction"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$_openTransaction</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">150</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The state of transaction</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodbeginTransaction">SPSQLite::beginTransaction()</a>, <a href="./SPSQLite.html#methodcommitTransaction">SPSQLite::commitTransaction()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_rememberType" id="$_rememberType"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_rememberType</span>
+			 = <span class="var-default"> true</span>			(line <span class="line-number">120</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set behaviour (reset or not reset the type setting?)</p>
+<p class="description"></p><p>If $_rememberType is true, it comes remembered between one call and the  other of returnRow() and selectRow(), if it is false, $_type always comes  set on 'both'</p><p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodreturnRows">SPSQLite::returnRows()</a>, <a href="./SPSQLite.html#methodselectRows">SPSQLite::selectRows()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_result" id="$_result"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">resource</span>
+			<span class="var-name">$_result</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">97</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The result resource</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodquery">SPSQLite::query()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_showError" id="$_showError"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">bool</span>
+			<span class="var-name">$_showError</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">77</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Show or not show the error message?</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodSPSQLite">SPSQLite::SPSQLite()</a>, <a href="./SPSQLite.html#method_showError">SPSQLite::_showError()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tableInfo" id="$_tableInfo"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_tableInfo</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">170</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array with table information</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> </li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_transaction" id="$_transaction"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_transaction</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">140</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Array of query</p>
+	<ul class="tags">
+				<li><span class="field">var:</span> of string (query)</li>
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodbeginTransaction">SPSQLite::beginTransaction()</a>, <a href="./SPSQLite.html#methodcommitTransaction">SPSQLite::commitTransaction()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_type" id="$_type"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_type</span>
+			 = <span class="var-default"> SQLITE_BOTH</span>			(line <span class="line-number">130</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Type of array index (row)</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodreturnRows">SPSQLite::returnRows()</a>, <a href="./SPSQLite.html#methodselectRows">SPSQLite::selectRows()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_version" id="$_version"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="media/images/PrivateVariable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_version</span>
+			 = <span class="var-default"> 'SPSQLite Class v 0.6'</span>			(line <span class="line-number">47</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The class version</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="./SPSQLite.html#methodclassVersion">SPSQLite::classVersion()</a></li>
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodSPSQLite" id="SPSQLite"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Constructor.png" />
+		<span class="method-title">Constructor SPSQLite</span> (line <span class="line-number">198</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the properties $file, $persistent and $showMessage.</p>
+<p class="description"></p><p>Connect to database.</p><p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			SPSQLite
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$persistent</span> = <span class="var-default">false</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$showError</span> = <span class="var-default">true</span>], [<span class="var-type">bool</span>&nbsp;<span class="var-name">$rememberType</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: filename (the SQLite database)</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$persistent</span><span class="var-description">: true or false</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$showError</span><span class="var-description">: true or false</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$rememberType</span><span class="var-description">: true or false</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodaddFunction" id="addFunction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">addFunction</span> (line <span class="line-number">500</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method expand the SQLite ability</p>
+<p class="description"></p><p>The functions added with this method, can be used in the sql query.  The functgion of PHP, they can be called with the sintax:  php('functionName', param, param, ...)</p><p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addFunction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$originalFunction</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$args</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: name of SQLite function</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$originalFunction</span><span class="var-description">: name of the original funtion to call</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$args</span><span class="var-description">: number of aguments</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodaddQuery" id="addQuery"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">addQuery</span> (line <span class="line-number">760</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add a query to transaction</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addQuery
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodaffectedRows" id="affectedRows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">affectedRows</span> (line <span class="line-number">659</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return how many lines are changed</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			affectedRows
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodalterTable" id="alterTable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">alterTable</span> (line <span class="line-number">265</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alter the structure of table</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			alterTable
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$tableName</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$newDefinition</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$sourceCols</span> = <span class="var-default">null</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$targetCols</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$tablename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tablename</span><span class="var-description">: name of table</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$newDefinition</span><span class="var-description">: array that it define a columns name and type.                                         Es: array('name1'=&gt;'type1','name1'=&gt;'type1',...);</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$sourceCols</span><span class="var-description">: array that define a columns name of table source                                         Es: array('name1','name1',...);</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$targetCols</span><span class="var-description">: array that define destination columns</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodbeginTransaction" id="beginTransaction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">beginTransaction</span> (line <span class="line-number">696</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Start transaction process</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			beginTransaction
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodclassVersion" id="classVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">classVersion</span> (line <span class="line-number">829</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The version of class</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			classVersion
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodclose" id="close"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">close</span> (line <span class="line-number">872</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Close a connection to database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			close
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodcommitTransaction" id="commitTransaction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">commitTransaction</span> (line <span class="line-number">715</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Finish the transaction process</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			commitTransaction
+		</span>
+					([<span class="var-type">bool</span>&nbsp;<span class="var-name">$stop</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$stop</span><span class="var-description">: true or false, if $stop is true</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methoddecodeBinary" id="decodeBinary"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">decodeBinary</span> (line <span class="line-number">460</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method return decoded binary data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			decodeBinary
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$content</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$content</span><span class="var-description">: binary data</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodencodeBinary" id="encodeBinary"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">encodeBinary</span> (line <span class="line-number">428</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method return encoded binary data</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			encodeBinary
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$file</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$file</span><span class="var-description">: name/path of file</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodescapeString" id="escapeString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">escapeString</span> (line <span class="line-number">781</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepare a string with special characters</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			escapeString
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetColsType" id="getColsType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">getColsType</span> (line <span class="line-number">405</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method return an array with columns name and type of the current table</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> or string</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getColsType
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$colname</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$colname</span><span class="var-description">: a specific column name</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodgetTableInfo" id="getTableInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">getTableInfo</span> (line <span class="line-number">359</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method return an array of table info or a specific info</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> or string</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getTableInfo
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tablename</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tablename</span><span class="var-description">: the name of table</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: specific the typo of information to obtain                                     valid values are: 'type','name','tbl_name','rootpage','sql'</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodlastInsertId" id="lastInsertId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">lastInsertId</span> (line <span class="line-number">643</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the last insert id (column declared INTEGER PRIMARY KEY )</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			lastInsertId
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodlibEncoding" id="libEncoding"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">libEncoding</span> (line <span class="line-number">797</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The encoding of library</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			libEncoding
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodlibVersion" id="libVersion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">libVersion</span> (line <span class="line-number">813</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The version of library</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			libVersion
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodnumRows" id="numRows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">numRows</span> (line <span class="line-number">675</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return the number of rows</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			numRows
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodoptimizeDatabase" id="optimizeDatabase"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">optimizeDatabase</span> (line <span class="line-number">477</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Optimize dimension of database with the SQLite statemant VACUUM</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			optimizeDatabase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$indexOrTable</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$indexOrTable</span><span class="var-description">: an index of a name of table</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodquery" id="query"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">query</span> (line <span class="line-number">520</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Submit a SQL query to database</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$buffer</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: query SQL SQLite compatible</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$buffer</span><span class="var-description">: true or false (If you only need sequential access to</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodreturnRows" id="returnRows"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">returnRows</span> (line <span class="line-number">552</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get rows !!</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			returnRows
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: 'both', 'assoc' or 'num'</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodselectRows" id="selectRows"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">selectRows</span> (line <span class="line-number">584</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Select a portion of rowset</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			selectRows
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$index01</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$index02</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$index01</span><span class="var-description">: first row number</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$index02</span><span class="var-description">: last row number</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: type of index                                     'both', 'num' or 'assoc'</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodsetWaitingTime" id="setWaitingTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">setWaitingTime</span> (line <span class="line-number">226</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the waiting time to busy</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setWaitingTime
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$milliseconds</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$milliseconds</span><span class="var-description">: number of missiseconds</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodturboMode" id="turboMode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/Method.png" />
+		<span class="method-title">turboMode</span> (line <span class="line-number">243</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Increase the performance of SQLite</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			turboMode
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="method_colsTypeCombine" id="_colsTypeCombine"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_colsTypeCombine</span> (line <span class="line-number">945</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Accessory method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_colsTypeCombine
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="method_createColsQuery" id="_createColsQuery"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_createColsQuery</span> (line <span class="line-number">309</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method create a fragment of query (process the array whith columns definition)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_createColsQuery
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$colsDefinition</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$onlyName</span> = <span class="var-default">false</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$colsfinition</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$colsfinition</span><span class="var-description">: array that it define a columns name or columns name and type</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_filterName" id="_filterName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_filterName</span> (line <span class="line-number">888</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Accessory method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_filterName
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$col</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="method_filterTrim" id="_filterTrim"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_filterTrim</span> (line <span class="line-number">928</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Accessory method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_filterTrim
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$col</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="method_filterType" id="_filterType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_filterType</span> (line <span class="line-number">908</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Accessory method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			_filterType
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$col</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="method_rollbackTransaction" id="_rollbackTransaction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_rollbackTransaction</span> (line <span class="line-number">743</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If a query fails in a transaction, this method it takes part</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_rollbackTransaction
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="method_setColsType" id="_setColsType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_setColsType</span> (line <span class="line-number">381</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the array _colsType with columns information</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_setColsType
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="method_setTableInfo" id="_setTableInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_setTableInfo</span> (line <span class="line-number">338</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method set _tableInfo</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_setTableInfo
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tablename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tablename</span><span class="var-description">: the name of table</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_setType" id="_setType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_setType</span> (line <span class="line-number">621</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This method set a type-index of the array rows</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_setType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$type</span><span class="var-description">: 'both', 'num' or 'assoc'</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_showError" id="_showError"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="media/images/PrivateMethod.png" />
+		<span class="method-title">_showError</span> (line <span class="line-number">846</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Print the last error</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_showError
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: the error message</span>			</li>
+				</ul>
+		
+		
+	</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documention generated on Mon, 14 Jul 2003 14:38:56 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.2.1</a>
+	</p>
+	</div></body>
+</html>
