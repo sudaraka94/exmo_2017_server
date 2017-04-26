@@ -33,7 +33,15 @@
 			</div>
 		</nav>
 	</div>
-
+	<!--Carousel-->
+	<div class="carousel carousel-slider center" data-indicators="true">
+		<a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
+    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
+    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>
+    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4"></a>
+	</div>
+  <!--End of Carousel-->
+  
 	<!--Import jQuery before materialize.js-->
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
@@ -41,6 +49,7 @@
 	<script>
 		$(document).ready(function () {
 			$(".button-collapse").sideNav();
+			$('.carousel.carousel-slider').carousel({fullWidth: true});
 		});
 	</script>
 </body>
